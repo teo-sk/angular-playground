@@ -7,6 +7,8 @@ angular.service('myAngularApp', function($route, $location, $window) {
 
   $route.when('/view1', {template: 'partials/partial1.html', controller: MyCtrl1});
   $route.when('/view2', {template: 'partials/partial2.html', controller: MyCtrl2});
+  $route.when('/test-ajax', {template: 'partials/test-ajax.html', controller: FetchCntl});
+  $route.when('/test-move', {template: 'partials/test-move.html', controller: FirstMoveCntl});
 
   var self = this;
 

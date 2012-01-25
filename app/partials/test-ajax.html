@@ -1,0 +1,13 @@
+  <div ng:controller="FetchCntl">
+    <select name="method">
+      <option>GET</option>
+      <option>JSON</option>
+    </select>
+    <input type="text" name="url" value="index.html" size="80"/>
+    <button ng:click="fetch()">fetch</button><br>
+    <button ng:click="updateModel('GET', 'index.html')">Sample GET</button>
+    <button ng:click="updateModel('JSON', 'https://www.googleapis.com/buzz/v1/activities/googlebuzz/@self?alt=json&callback=JSON_CALLBACK')">Sample JSONP (Buzz API)</button>
+    <button ng:click="updateModel('JSON', 'https://www.invalid_JSONP_request.com&callback=JSON_CALLBACK')">Invalid JSONP</button>
+    <pre>code={{code}}</pre>
+    <pre>response={{response}}</pre>
+  </div>
